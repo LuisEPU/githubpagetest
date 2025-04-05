@@ -1,0 +1,116 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+html, body {
+  height: auto;
+  overflow: auto; /* Permite el desplazamiento */
+}
+
+/* Fondo gris claro */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background-color: #f2f2f2; /* Fondo gris claro */
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+textarea {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* Subrayado moderno azul cielo */
+#outputText {
+  border-bottom: 3px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+#outputText:focus {
+  border-bottom: 3px solid #00b5d8; /* Azul cielo */
+  outline: none;
+}
+
+/* Estilo del botón */
+/* Estilo del botón */
+button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: transparent; /* Fondo transparente por defecto */
+    border: 2px solid #00b5d8; /* Azul cielo */
+    color: #00b5d8; /* Texto azul cielo */
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #00b5d8; /* Fondo azul cielo al hacer hover */
+    color: white; /* Cambia el texto a blanco */
+    transform: translateY(-4px); /* Hace que el botón 'salte' */
+  }
+  
+
+button:focus {
+  outline: none; /* Asegura que no aparezca el borde de enfoque */
+}
+
+.subrayado {
+  position: relative;
+  color: #00b5d8; /* Color azul cielo para la palabra "humano" */
+}
+
+.subrayado::after {
+  content: '';
+  position: absolute;
+  bottom: -3px; /* Distancia del subrayado respecto al texto */
+  left: 0;
+  width: 100%;
+  height: 4px; /* Grosor del subrayado */
+  background-color: #00b5d8; /* Azul cielo para el subrayado */
+  border-radius: 50px; /* Bordes redondeados */
+}
+
+header {
+  background-color: transparent; /* Fondo transparente para el header */
+}
+
+h1 {
+  padding: 0.75rem 1.5rem; /* Añadimos un poco de padding */
+  background: #00b5d8; /* Fondo azul cielo */
+  color: white;
+  border-radius: 50px; /* Bordes redondeados */
+  font-size: 2.25rem; /* Tamaño de fuente */
+}
+
+nav a {
+  padding: 0.75rem 1.5rem; /* Padding alrededor del texto */
+  background: #00b5d8; /* Fondo azul cielo */
+  color: white;
+  border-radius: 50px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar color */
+}
+
+nav a:hover {
+  background-color: #1d63d2; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+/* FAQ */
+.faq-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+.faq-question {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333333;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: #555555;
+  margin-top: 1rem;
+}
