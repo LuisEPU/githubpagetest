@@ -1,1 +1,102 @@
-<h1>Github pages test</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adiós Detectores de IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="styles.css" rel="stylesheet" />
+  <script>
+    // Función para iniciar la animación de fade-in y slide-up cuando la página cargue
+    window.onload = function () {
+      const fadeInContainer = document.getElementById("fade-in-container");
+      fadeInContainer.classList.remove("opacity-0", "translate-y-20");
+      fadeInContainer.classList.add("opacity-100", "translate-y-0");
+    };
+  </script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-inter opacity-0 translate-y-20 transition-all duration-1500" id="fade-in-container">
+  <header class="w-full py-8 px-4">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <!-- Título con fondo azul cielo y bordes redondeados -->
+      <h1 class="text-xl font-bold tracking-tight text-white px-6 py-3 rounded-full bg-sky-400 text-white">
+        LuisPa
+      </h1>
+      <nav class="text-sm font-medium text-gray-600 space-x-6">
+        <!-- Enlaces con fondo azul cielo y bordes redondeados -->
+        <a href="#" class="px-6 py-3 rounded-full bg-sky-400 text-white hover:bg-sky-500 transition">Inicio</a>
+        <a href="#" class="px-6 py-3 rounded-full bg-sky-400 text-white hover:bg-sky-500 transition">Cómo Funciona</a>
+        <a href="#" class="px-6 py-3 rounded-full bg-sky-400 text-white hover:bg-sky-500 transition">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="py-16">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <h2 class="text-5xl sm:text-6xl font-semibold leading-tight mb-6 text-gray-900">
+        🌟 Haz que tu texto sea 100%<span class="subrayado"> indetectable</span> ✨
+      </h2>
+      <p class="text-lg text-gray-600 mb-12">
+        Modifica estratégicamente tu contenido para que se vea 100% humano, con solo un clic.
+      </p>
+      
+      <div class="bg-white p-6 rounded-xl shadow-xl">
+        <textarea
+          id="inputText"
+          rows="6"
+          placeholder="Pega aquí el texto generado por IA..."
+          class="w-full p-4 rounded-md border border-gray-300 focus:outline-none focus:ring-2 focus:ring-black resize-none text-gray-800"
+        ></textarea>
+
+        <button
+          onclick="reemplazarTexto()"
+          id="submitButton"
+          class="mt-4 bg-black text-white py-3 px-6 rounded-md font-medium hover:bg-gray-800 transition"
+        >
+          Humanizar Texto
+        </button>
+
+        <!-- Spinner de carga -->
+        <div id="loader" class="hidden mt-4">
+          <div class="animate-spin rounded-full h-12 w-12 border-t-4 border-black border-solid"></div>
+        </div>
+
+        <textarea
+          id="outputText"
+          placeholder="Aquí verás tu texto humanizado"
+          readonly
+          style="overflow:hidden"
+          class="mt-4 w-full p-4 rounded-md border border-gray-300 bg-gray-100 text-gray-800 resize-none"
+        ></textarea>
+      </div>
+    </div>
+  </main>
+
+  <!-- Sección de Preguntas Frecuentes (FAQ) -->
+  <section class="max-w-4xl mx-auto py-16 px-6">
+    <h2 class="text-3xl font-bold text-center text-gray-900 mb-8">Preguntas Frecuentes (FAQ)</h2>
+    
+    <div class="bg-white p-6 rounded-xl shadow-xl mb-6">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Por qué hice esto?</h3>
+      <p class="text-gray-600">Estaba aburrido, y se me ocurrió que sería interesante ayudar a las personas a modificar el contenido generado por IA para hacerlo más natural.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-xl mb-6">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Cómo funciona?</h3>
+      <p class="text-gray-600">Nuestro sistema utiliza técnicas avanzadas para modificar tu texto generado por IA, haciendo que se vea completamente humano y natural al leerlo.</p>
+    </div>
+
+    <div class="bg-white p-6 rounded-xl shadow-xl mb-6">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">¿Es seguro usarlo?</h3>
+      <p class="text-gray-600">Sí, el proceso es completamente seguro. No guardamos ni procesamos tu información, y tus datos son confidenciales.</p>
+    </div>
+
+  </section>
+
+  <footer class="border-t border-gray-200 mt-20 py-6 text-center text-sm text-gray-500">
+    Hecho con ♥ por LuisPa · Inspirado en Notion
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
